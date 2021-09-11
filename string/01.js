@@ -1,15 +1,14 @@
 // EASY
-// REMOVE VOWELS FROM A STRING
+// DEFANGING AN IP ADDRESS
 
-const removeVowels = function (word) {
-    let removed = '';
-    for (char of word.toLowerCase()) {
-        if (!(char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u')) {
-            removed += char;
-        }
+const defangIPaddr = function (address) {
+    let finalAddress = '';
+    for (char of address) {
+        if (char == '.') finalAddress += '[' + char + ']';
+        else finalAddress += char;
     }
-    return removed;    
+    return finalAddress;
 }
 
-const result = removeVowels('Aeroplane');
+const result = defangIPaddr('255.100.50.0');
 console.log(result);

@@ -1,14 +1,13 @@
 // EASY
-// DEFANGING AN IP ADDRESS
+// JEWELS AND STONES
 
-const defangIPaddr = function (address) {
-    let finalAddress = '';
-    for (char of address) {
-        if (char == '.') finalAddress += '[' + char + ']';
-        else finalAddress += char;
+const numJewelsInStones = function (jewels, stones) {
+    let count = 0;
+    for (let stone of stones) {
+        for (let jewel of jewels) if (jewel == stone) count++;
     }
-    return finalAddress;
+    return count;
 }
 
-const result = defangIPaddr('255.100.50.0');
-console.log(result);
+const answer = numJewelsInStones('aA', 'aAAbbb');
+console.log(answer);
