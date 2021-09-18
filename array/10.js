@@ -1,0 +1,4 @@
+// EASY
+// CREATE TARGET ARRAY IN THE GIVEN ORDER
+
+// code goes here
